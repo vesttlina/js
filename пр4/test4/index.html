@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        const array = [6, 4, 7, 3, 8, 1, 5, 2, 9, 7, 2, 4, 1, 5, 7];
+
+    const occurrences = {};
+    array.forEach(num => {
+        occurrences[num] = (occurrences[num] || 0) + 1;
+    });
+    for (const [num, count] of Object.entries(occurrences)) {
+    alert(`${num} : ${count}`);
+    }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

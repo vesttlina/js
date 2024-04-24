@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        
+    const array = [6, 4, 7, 3, 8, 1, 5, 2, 9, 7, 2, 4, 1, 5, 7];    
+    
+    let evenSum = 0;
+    let oddProduct = 1;
+    array.forEach(num => {
+    if (num % 2 === 0) {
+        evenSum += num;
+    } else {
+        oddProduct *= num;
+    }
+});
+    alert(`Сума парних елементів: ${evenSum}`);
+    alert(`Добуток непарних елементів: ${oddProduct}`);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
