@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document3</title>
+
+    <script>
+    function Rectangle(width, height) {
+        this.width = width;
+        this.height = height;
+        this.perimeter = function() {
+            return 2 * (this.width + this.height);
+        };
+        this.area = function() {
+            return this.width * this.height;
+        };
+    }
+
+const rectangle1 = new Rectangle(3, 5);
+const rectangle2 = new Rectangle(7, 10);
+const rectangle3 = new Rectangle(4, 4);
+
+console.log("Rectangle 1:");
+console.log("Perimeter:", rectangle1.perimeter());
+console.log("Area:", rectangle1.area());
+
+console.log("Rectangle 2:");
+console.log("Perimeter:", rectangle2.perimeter());
+console.log("Area:", rectangle2.area());
+
+console.log("Rectangle 3:");
+console.log("Perimeter:", rectangle3.perimeter());
+console.log("Area:", rectangle3.area());
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

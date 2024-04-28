@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document2</title>
+
+    <script>
+    Array.prototype.search = function(callbackfn) {
+        const result = [];
+        for (let i = 0; i < this.length; i++) {
+            if (callbackfn(this[i])) {
+                result.push(this[i]);
+            }
+        }
+        return result;
+    };
+
+const arr = [2, 8, -6, 9, 4, 3, -8];
+
+console.log(arr.search(num => num % 2 === 0));
+console.log(arr.search(num => num % 2 !== 0));
+console.log(arr.search(num => num > 0));
+console.log(arr.search(num => num < 0));
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

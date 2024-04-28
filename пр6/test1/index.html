@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document1</title>
+
+    <script>
+    function execute(callbackfn) {
+        return callbackfn();
+}
+    function add(a, b) {
+        return a + b;
+}
+    function subtract(a, b) {
+        return a - b;
+}
+    function multiply(a, b) {
+        return a * b;
+}
+    console.log(execute(() => add(4, 5)));
+    console.log(execute(() => subtract(10, 3))); 
+    console.log(execute(() => multiply(4, 8)));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
