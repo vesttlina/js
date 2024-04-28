@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document2</title>
+
+    <script>
+
+    function Person(firstName, lastName, birthday) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.birthday = new Date(birthday);
+    }
+
+    const people = [
+        new Person('Vita', 'Ievleva', '2005-01-08'),
+        new Person('Maryna', 'Kushnir', '1988-07-10'),
+        new Person('Ivan', 'Kravchuk', '2000-03-02')
+    ];
+
+    people.forEach(person => console.log(person));
+
+    people.sort((a, b) => {
+        if (a.firstName === b.firstName) {
+            return a.lastName.localeCompare(b.lastName);
+        }
+        return a.firstName.localeCompare(b.firstName);
+    });
+
+    console.log('Відсортовані особи:');
+    for (const person of people) {
+        console.log(person)
+    }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

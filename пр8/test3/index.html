@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document3</title>
+
+    <script>
+    function Person(firstName, lastName, birthday) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.birthday = new Date(birthday);
+    }
+    function Community(...people) {
+        this.people = people;
+  
+        this[Symbol.iterator] = function() {
+            let index = 0;
+            const people = this.people;
+            return {
+                next() {
+                    if (index < people.length) {
+                        return { value: people[index++], done: false };
+                    } else {
+                        return { done: true };
+                    }
+                }
+            };
+        };
+    }
+
+const community = new Community(
+    new Person('Vita', 'Ievleva', '2005-01-08'),
+    new Person('Maryna', 'Kushnir', '1988-07-10'),
+    new Person('Ivan', 'Kravchuk', '2000-03-02')
+);
+
+    console.log('Інформація про особи у спільноті:');
+    for (const person of community) {
+        console.log(person);
+    }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
