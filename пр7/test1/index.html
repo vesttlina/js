@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document1</title>
+
+    <script>
+    function sumOfDigits(number) {
+        if (number < 10) {
+            return number;
+        } else {
+            return number % 10 + sumOfDigits(Math.floor(number / 10));
+    }
+}
+
+    console.log(sumOfDigits(12345)); // 15
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

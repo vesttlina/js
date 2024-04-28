@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document2</title>
+
+    <script>
+    function isNumberPrime(number, divisor = 2) {
+        if (number <= 2) {
+            return number === 2;
+        }
+        if (divisor === number) {
+            return true;
+        }
+        if (number % divisor === 0) {
+            return false;
+        }
+        return isNumberPrime(number, divisor + 1);
+    }
+
+    console.log(isNumberPrime(17)); 
+    console.log(isNumberPrime(18));
+    
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
